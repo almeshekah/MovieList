@@ -8,7 +8,7 @@ const WatchedButton = (props) => {
   const dispatch =useDispatch();
 
   return (
-    <Button onClick={() => dispatch(watchedMovie(props.movieId))}>
+    <Button onClick={() => dispatch(watchedMovie(props.watched))}>
       Watched
     </Button>
   );

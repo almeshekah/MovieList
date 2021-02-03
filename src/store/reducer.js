@@ -22,7 +22,7 @@ const reducer =(state = initialState ,action) => {
             return{
                 ...state,
                 movies : state.movies.filter(
-                (movie)=>movie.id!==action.payload.movieId
+                (movie)=>movie.watched!==action.payload.watched
 
                 ),
             };

@@ -25,7 +25,7 @@ import { addMovies } from "../store/actions";
 
     return(
         <div>
-        <h1>Create</h1>
+      
 
         <Form onSubmit = {handleSubmit}>
             
