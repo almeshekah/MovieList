@@ -19,13 +19,18 @@ const reducer =(state = initialState ,action) => {
             };
 
             case "WATCHED_MOVIE":
-            return{
-                ...state,
-                movies : state.movies.filter(
-                (movie)=>movie.id!==action.payload.movieId
-
-                ),
-            };
+                const index = state.movies.findIndex(
+                    (movie) => movie.id === action.payload.movie.id
+                  );
+                  const newState = [...state.movies];
+                  newState[index] = action.payload.movie;
+                  return {
+                    ...state,
+                    movies: state.movies.map((movie) =>
+                    movie.id === newState.id ? newState : movie
+                    ),
+                  
+                  };
 
             case "ADD_MOVIE":
                 const { newMovie } = action.payload;

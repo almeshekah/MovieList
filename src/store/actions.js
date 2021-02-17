@@ -11,10 +11,10 @@ export const deleteMovie =(movieId)=>{
    
 };
 
-export const watchedMovie =(movieId)=>{
+export const watchedMovie =(moive)=>{
     return{
         type:WATCHED_MOVIE,
-        payload:{movieId:movieId},
+        payload:{moive},
    
     };
    

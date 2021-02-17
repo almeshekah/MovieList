@@ -16,16 +16,17 @@ import { addMovies } from "../store/actions";
       const handleChange = (event) => {
         setMovie({ ...movie, [event.target.name]: event.target.value });
     };
+    
       
       const handleSubmit = (event) => {
         event.preventDefault();
         dispatch(addMovies(movie));
         
+        
     };
 
     return(
         <div>
-        <h1>Create</h1>
 
         <Form onSubmit = {handleSubmit}>
             
